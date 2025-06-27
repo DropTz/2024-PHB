@@ -867,65 +867,6 @@ AddSubClass("barbarian", "world tree", {
     },
   },
 });
-legacySubClassRefactor("barbarian", "zealot", {
-  regExpSearch: /^(?=.*(barbarian))(?=.*(zealot)).*$/i,
-  subname: "Path of the Zealot",
-  replaces: "path of the zealot",
-  source: [["P24", 57]],
-  features: {
-    "subclassfeature3": {
-      name: "Divine Fury",
-      source: [["P24", 57]],
-      minlevel: 3,
-	  additional: ["", "", "1d6+1", "1d6+2", "1d6+2", "1d6+3", "1d6+3", "1d6+4", "1d6+4", "1d6+5", "1d6+5", "1d6+6", "1d6+6", "1d6+7", "1d6+7", "1d6+8", "1d6+8", "1d6+9", "1d6+9", "1d6+10"],
-      description: desc([
-        "While Raging, my first hit each turn deals extra damage. Choose Necrotic or Radiant damage each time.",
-      ]),
-    },
-    "subclassfeature3.1": {
-      name: "Warrior of the Gods",
-      source: [["P24", 57]],
-      minlevel: 3,
-      action: "Bonus Action",
-	  limfeaname: "Healing Pool: d12",
-      usages: [0, 0, 4, 4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7],
-      recovery: "long rest",
-      description: desc([
-        "As a Bonus Action, expend d12s from a healing pool to regain HP. Regain all dice after a Long Rest."
-      ]),
-    },
-    "subclassfeature6": {
-      name: "Fanatical Focus",
-      source: [["P24", 57]],
-      minlevel: 6,
-      description: desc([
-        "Once per Rage, reroll a failed save with a bonus equal to my Rage Damage bonus. I must use new roll"
-      ]),
-    },
-    "subclassfeature10": {
-      name: "Zealous Presence",
-      source: [["P24", 57]],
-      minlevel: 10,
-      action: "bonus action",
-      usages: 1,
-      recovery: "long rest",
-      description: desc([
-        "As a Bonus Action, give up to ten creatures within 60 feet Advantage on attacks and saves until my next turn. Recharge after Long Rest or by expending Rage."
-      ]),
-    },
-    "subclassfeature14": {
-      name: "Rage of the Gods",
-      source: [["P24", 57]],
-      minlevel: 14,
-      action: ["reaction", "Revivification"],
-      usages: 1,
-      recovery: "long rest",
-      description: desc([
-        "Assume divine form for 1 minute when Raging. Gain flight, resistance to Necrotic, Psychic, and Radiant damage. Use Reaction to prevent an ally from dropping to 0 HP and change their HP to 1/2 my Barbarian level by expending Rage."
-      ]),
-    },
-  },
-});
 legacyClassRefactor("bard", {
   regExpSearch: /bard/i,
   name: "Bard",
